@@ -10,13 +10,13 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex flex-col pt-16 dark:bg-black dark:text-white">
+    <div className="flex flex-col pt-16 dark:bg-zin-950 dark:text-white">
       {/* Hero Section */}
       <section className="mt-20 pb-12 space-y-10 md:space-y-20 px-5">
         <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
           <Badge
             variant="outline"
-            className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300"
+            className="text-green-700 border-green-300 bg-green-50 dark:bg-green-900/20 dark:border-green-700 dark:text-green-300"
           >
             Split expenses. Simplify life.
           </Badge>
@@ -73,7 +73,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <Badge
             variant="outline"
-            className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300"
+            className="text-green-700 border-green-300 bg-green-50 dark:bg-green-900/20 dark:border-green-700 dark:text-green-300"
           >
             Features
           </Badge>
@@ -89,7 +89,7 @@ export default function Home() {
             {FEATURES.map(({ title, Icon, bg, color, description }) => (
               <Card
                 key={title}
-                className="flex flex-col items-center space-y-4 p-6 text-center dark:bg-zinc-900"
+                className="flex flex-col items-center space-y-4 p-6 text-center dark:bg-zinc-950"
               >
                 <div className={`rounded-full p-3 ${bg}`}>
                   <Icon className={`h-6 w-6 ${color}`} />
@@ -107,11 +107,11 @@ export default function Home() {
       <Separator />
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 dark:bg-black">
+      <section id="how-it-works" className="py-20 dark:bg-zinc-950">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <Badge
             variant="outline"
-            className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300"
+            className="text-green-700 border-green-300 bg-green-50 dark:bg-green-900/20 dark:border-green-700 dark:text-green-300"
           >
             How It Works
           </Badge>
@@ -146,7 +146,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <Badge
             variant="outline"
-            className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300"
+            className="text-green-700 border-green-300 bg-green-50 dark:bg-green-900/20 dark:border-green-700 dark:text-green-300"
           >
             Testimonials
           </Badge>
@@ -158,7 +158,7 @@ export default function Home() {
             {TESTIMONIALS.map(({ quote, name, role, image }) => (
               <Card
                 key={name}
-                className="flex flex-col justify-between dark:bg-zinc-900"
+                className="flex flex-col justify-between dark:bg-zinc-950"
               >
                 <CardContent className="space-y-4 p-6">
                   <p className="text-gray-500 dark:text-gray-300">{quote}</p>
@@ -183,20 +183,22 @@ export default function Home() {
         </div>
       </section>
 
+      <Separator />
+
       {/* Call to Action */}
-      <section className="py-20 gradient">
+      <section className="py-20 bg-gray-50 dark:bg-zinc-950 transition-colors duration-300">
         <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
-          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl text-white">
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl gradient-title dark:gradient-title">
             Ready to simplify expense sharing?
           </h2>
-          <p className="mx-auto max-w-[600px] text-green-100 md:text-xl/relaxed">
+          <p className="mx-auto max-w-[600px] text-zinc-600 dark:text-zinc-300 md:text-xl/relaxed">
             Join thousands of users who have made splitting expenses
             stress‑free.
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-green-800 hover:bg-green-800 text-white hover:opacity-90"
+            className="bg-green-700 hover:bg-green-800 text-white hover:opacity-90"
           >
             <Link href="/dashboard">
               Get Started

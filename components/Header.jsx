@@ -24,7 +24,7 @@ export default function Header() {
   if (!mounted) return null; // Avoid rendering on server
 
   return (
-    <header className="fixed top-0 w-full border-b bg-white dark:bg-zinc-900 backdrop-blur z-50 supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-zinc-900/60">
+    <header className="fixed top-0 w-full border-b bg-white dark:bg-zinc-950 backdrop-blur z-50 supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-zinc-950/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -87,7 +87,7 @@ export default function Header() {
             <SignInButton>
               <Button
                 variant="ghost"
-                className="bg-zinc-100 text-black hover:bg-zinc-200 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800 border cursor-pointer"
+                className="bg-zinc-100 text-black hover:bg-zinc-200 dark:bg-zinc-950 dark:text-white dark:hover:bg-zinc-800 border cursor-pointer"
               >
                 Sign In
               </Button>
