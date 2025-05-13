@@ -94,9 +94,9 @@ export const getExpensesBetweenUsers = query({
     // Merge → candidate set is now just the rows either of us paid for
     const candidateExpenses = [...myPaid, ...theirPaid];
 
-    /* ───── 2. Keep only rows where BOTH are involved (payer or split) ─ */
+    /* ───── 2. Keep rows where BOTH are involved (payer or split) ─ */
     const expenses = candidateExpenses.filter((e) => {
-      // me is always involved (I’m the payer OR in splits – verified below)
+      // I am always involved (I’m the payer OR in splits – verified below)
       const meInSplits = e.splits.some((s) => s.userId === me._id);
       const themInSplits = e.splits.some((s) => s.userId === userId);
 
