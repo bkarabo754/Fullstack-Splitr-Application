@@ -1,4 +1,4 @@
-import { ArrowUpCircle } from 'lucide-react';
+import { ArrowDownCircle, ArrowUpCircle } from 'lucide-react';
 import BalanceList from './BalanceList';
 
 export function BalanceSummary({ balances }) {
