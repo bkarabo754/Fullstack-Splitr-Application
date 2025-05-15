@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlusCircle, ArrowLeftRight, ArrowLeft } from 'lucide-react';
-import { SettlementList } from '@/components/settlement-list';
+import { SettlementList } from '@/app/(main)/settlements/[type]/[id]/settlement-components/settlement-list';
 import { ExpenseList } from '@/components/expense-list';
 
 export default function PersonExpensesPage() {
@@ -61,9 +61,10 @@ export default function PersonExpensesPage() {
             <AvatarFallback>{otherUser?.name?.charAt(0) || '?'}</AvatarFallback>
           </Avatar>
           <div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-black dark:from-white dark:to-white">
               {otherUser?.name}
             </h1>
+
             <p className="text-muted-foreground text-sm">{otherUser?.email}</p>
           </div>
         </div>

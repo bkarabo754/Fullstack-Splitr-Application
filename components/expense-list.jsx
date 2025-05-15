@@ -133,7 +133,7 @@ export function ExpenseList({
                               You paid
                             </span>
                           ) : (
-                            <span className="text-red-500">
+                            <span className="text-green-700">
                               {payer.name} paid
                             </span>
                           )}

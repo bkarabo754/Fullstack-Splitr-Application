@@ -13,9 +13,10 @@ import { useConvexQuery } from '@/hooks/use-convex-query';
 import { ChevronRight, PlusCircle, Users } from 'lucide-react';
 import Link from 'next/link';
 import { BarLoader } from 'react-spinners';
-import { ExpenseSummary } from './components/expense-summary';
-import { BalanceSummary } from './components/balance-summary';
+// import { ExpenseSummary } from './components/expense-summary/expense-summary';
 import { GroupList } from './components/group-list';
+import { BalanceSummary } from './components/balances/balance-summary';
+import { ExpenseSummary } from './components/summary-expense/expense-summary';
 
 const DashboardPage = () => {
   const { data: balances, isLoading: balancesLoading } = useConvexQuery(
@@ -48,7 +49,9 @@ const DashboardPage = () => {
       ) : (
         <>
           <div className="flex  justify-between flex-col sm:flex-row sm:items-center gap-4">
-            <h1 className="text-5xl gradient-title">Dashboard</h1>
+            <h1 className="text-5xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-foreground/80">
+              Dashboard
+            </h1>
             <Button asChild>
               <Link href="/expenses/new">
                 <PlusCircle className="mr-2 h-4 w-4" />
